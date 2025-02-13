@@ -1,0 +1,17 @@
+name: dnsmasq
+services:
+  dnsmasq:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: dnsmasq
+    environment:
+      - HTTP_USER=foo
+      - HTTP_PASS=bar
+    volumes:
+      - ./conf/dnsmasq.conf:/etc/dnsmasq.conf
+      - ./conf/dnsmasq.hosts:/etc/dnsmasq.hosts
+    ports:
+      - 53:53/udp
+      - 5380:8080
+    restart: always

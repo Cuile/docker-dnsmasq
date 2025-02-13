@@ -1,0 +1,5 @@
+# Specify an IP address to return for any host in the given domains.
+# lan
+192.168.1.1 route.lan
+192.168.1.250   ac.lan
+192.168.1.60	pro.pve.lan
