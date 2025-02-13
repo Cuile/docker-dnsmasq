@@ -1,7 +1,6 @@
 FROM alpine:3.21
 LABEL maintainer="dev@jpillora.com"
 # setup dnsmasq and webproc binary
-# COPY ../resources/webproc_0.4.0_linux_amd64.gz /etc/webproc_0.4.0_linux_amd64.gz
 ENV WEBPROC_URL https://github.com/jpillora/webproc/releases/download/v0.4.0/webproc_0.4.0_linux_amd64.gz
 RUN apk update \
 	&& apk --no-cache add dnsmasq \
