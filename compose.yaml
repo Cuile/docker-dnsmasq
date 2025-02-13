@@ -1,6 +1,7 @@
 name: dnsmasq
 services:
   dnsmasq:
+    image: jpillora/dnsmasq
     build:
       context: .
       dockerfile: ./docker/Dockerfile
